@@ -1,0 +1,16 @@
+<div class="row m-1">
+  <div class="col">
+    <div class="row">
+      <div class="col">{{ forecast.dt_txt | date: "EE d LLL" }}</div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{ forecast.dt_txt | date: "hh:mm" }}
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    {{ forecast.main.temp }}
+  </div>
+  <div class="col"></div>
+</div>

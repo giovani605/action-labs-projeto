@@ -1,1 +1,14 @@
-<p>pagina-detalhes works!</p>
+<div class="row m-1">
+  <div class="col">
+    {{ tempo.name }}
+  </div>
+  <div class="col">Detalhews</div>
+</div>
+<div class="row">
+  <div class="col">
+    <app-item-forecast
+      *ngFor="let forecast of dadosForecast"
+      [forecast]="forecast"
+    ></app-item-forecast>
+  </div>
+</div>

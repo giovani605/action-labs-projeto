@@ -1,5 +1,6 @@
 import { Cidade } from './../../classes/cidade.class';
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-cidade',
@@ -10,7 +11,10 @@ export class ItemCidadeComponent implements OnInit {
   @Input()
   cidade: Cidade;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+  redirecionar() {
+    this.router.navigate(['details/' + this.cidade.id]);
+  }
 }

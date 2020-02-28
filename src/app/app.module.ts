@@ -11,13 +11,15 @@ import { ListaCidadeModule } from './lista-cidade/lista-cidade.module';
 import { PaginaPesquisaComponent } from './pagina-pesquisa/pagina-pesquisa.component';
 import { PaginaDetalhesComponent } from './pagina-detalhes/pagina-detalhes.component';
 import { FormsModule } from '@angular/forms';
+import { ItemForecastComponent } from './pagina-detalhes/item-forecast/item-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraPesquisaCidadeComponent,
     PaginaPesquisaComponent,
-    PaginaDetalhesComponent
+    PaginaDetalhesComponent,
+    ItemForecastComponent
   ],
   imports: [
     BrowserModule,

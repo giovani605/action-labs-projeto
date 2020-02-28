@@ -1,4 +1,7 @@
+import { Forecast } from './../classes/forecast.class';
+import { WeatherService } from './../services/weather.service';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-detalhes',
@@ -6,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagina-detalhes.component.css']
 })
 export class PaginaDetalhesComponent implements OnInit {
+  dadosForecast: any[];
 
-  constructor() { }
+  tempo: any;
+
+  constructor(
+    private weatherService: WeatherService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.weatherService.tempoAtualCidade(params.id).subscribe(dados => {
+        this.tempo = dados;
+      });
+      this.weatherService.previsaoTempoCidade(params.id).subscribe(dados => {
+        console.log(dados);
+        this.dadosForecast = dados.list;
+      });
+    });
   }
-
 }

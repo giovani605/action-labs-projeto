@@ -25,15 +25,19 @@ export class PaginaPesquisaComponent implements OnInit {
     });
   }
   pesquisar(cidade) {
-    this.weatherService
-      .procurarCidade(cidade)
-      .pipe(
-        map(cidades => this.cidades),
-        catchError((err, obs) => {
-          console.log(err);
-          return of([]);
-        })
-      )
-      .subscribe(cidades => (this.cidades = cidades));
+    if (cidade.length > 3) {
+      this.weatherService
+        .procurarCidade(cidade)
+        .pipe(
+          map(response => {
+            return response.list;
+          }),
+          catchError((err, obs) => {
+            console.log(err);
+            return [];
+          })
+        )
+        .subscribe(cidades => (this.cidades = cidades));
+    }
   }
 }
