@@ -1,2 +1,4 @@
 <p>lista-cidade works!</p>
-<app-item-cidade *ngFor="let cidade of cidades"></app-item-cidade>
+<div *ngFor="let cidade of cidades">
+  <app-item-cidade [cidade]="cidade"></app-item-cidade>
+</div>

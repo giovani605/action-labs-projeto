@@ -8,15 +8,24 @@ import { BarraPesquisaCidadeComponent } from './barra-pesquisa-cidade/barra-pesq
 import { ListaCidadeComponent } from './lista-cidade/lista-cidade.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaCidadeModule } from './lista-cidade/lista-cidade.module';
+import { PaginaPesquisaComponent } from './pagina-pesquisa/pagina-pesquisa.component';
+import { PaginaDetalhesComponent } from './pagina-detalhes/pagina-detalhes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, BarraPesquisaCidadeComponent],
+  declarations: [
+    AppComponent,
+    BarraPesquisaCidadeComponent,
+    PaginaPesquisaComponent,
+    PaginaDetalhesComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ListaCidadeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
