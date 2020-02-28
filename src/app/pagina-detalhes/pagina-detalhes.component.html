@@ -1,11 +1,23 @@
+<div class="row">
+  <div class="col">Weather in {{ tempo?.name }}, {{ tempo?.sys.country }}</div>
+</div>
+
 <div class="row m-1">
-  <div class="col">
-    {{ tempo.name }}
+  <div class="col-6">
+    {{ tempo?.name }}
   </div>
   <div class="col">Detalhews</div>
 </div>
 <div class="row">
   <div class="col">
+    5 day weather forecast
+  </div>
+  <div class="col">
+    every 3 hours
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
     <app-item-forecast
       *ngFor="let forecast of dadosForecast"
       [forecast]="forecast"

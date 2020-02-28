@@ -13,4 +13,8 @@ export class ItemForecastComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  urlIcon(icon) {
+    return 'https://openweathermap.org/img/w/' + icon + '.png';
+  }
 }

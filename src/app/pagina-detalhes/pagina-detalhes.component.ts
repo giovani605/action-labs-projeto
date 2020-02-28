@@ -1,3 +1,4 @@
+import { Tempo } from './../classes/tempo.class';
 import { Forecast } from './../classes/forecast.class';
 import { WeatherService } from './../services/weather.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PaginaDetalhesComponent implements OnInit {
   dadosForecast: any[];
 
-  tempo: any;
+  tempo: Tempo;
 
   constructor(
     private weatherService: WeatherService,

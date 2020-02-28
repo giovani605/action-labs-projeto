@@ -1,6 +1,9 @@
+import { Weather } from './weather.class';
+import { Principal } from './Principal.class';
+
 export interface Forecast {
   dt?;
-  main?;
   dt_txt: Date;
-  weather: any;
+  weather: Weather;
+  main?: Principal;
 }

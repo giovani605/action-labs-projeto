@@ -1,1 +1,6 @@
-export interface Weather
+export interface Weather {
+  id?;
+  main?;
+  description?;
+  icon?;
+}
