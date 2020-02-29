@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: Roboto;
+}
+
+.centrilizar {
+  text-align: center;
+}
+
+.cinza {
+  color: gray;
+}
+
+.fonte32 {
+  font-size: 32px;
+}
+
+.fonte48 {
+  font-size: 48px;
+}
+.fonte16 {
+  font-size: 16px;
+}
+
+.fonte14 {
+  font-size: 14px;
+}
+
+.fonte24 {
+  font-size: 24px;
+}
+
+.bg-gray {
+  background-color: gray;
+}
+.bg-cinza-claro {
+  background-color: #f0f0f0;
+}
+.preto1 {
+  color: #3c3c3c;
+}
+
+.azul1 {
+  color: #4a90e2;
+}
+
+.opaco75 {
+  opacity: 0.75;
+}
+
+.size5050 {
+  width: 50px;
+  height: 50px;
+}
+.altura200 {
+  height: 200px;
+}
+.altura100 {
+  height: 100px;
+}
+.altura50 {
+  height: 50px;
+}
+
+.borderSize8 {
+  border-width: 8px;
+}
+
+.light-gray {
+  background-color: #f6f6f6;
+}

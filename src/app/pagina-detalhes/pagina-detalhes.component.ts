@@ -12,6 +12,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PaginaDetalhesComponent implements OnInit {
   dadosForecast: any[];
 
+  dataAtual = new Date();
+
   tempo: Tempo;
 
   constructor(

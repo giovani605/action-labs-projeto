@@ -23,7 +23,7 @@ export class WeatherService {
     let params: HttpParams = new HttpParams();
     // http params is weird
     params = params.append('appId', environment.weatherApiKey);
-    params = params.append('units', 'metrics');
+    params = params.append('units', 'metric');
     for (const key of Object.keys(parametro)) {
       params = params.append(key, parametro[key]);
     }

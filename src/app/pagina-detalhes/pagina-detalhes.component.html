@@ -1,26 +1,118 @@
-<div class="row">
-  <div class="col">Weather in {{ tempo?.name }}, {{ tempo?.sys.country }}</div>
-</div>
-
-<div class="row m-1">
-  <div class="col-6">
-    {{ tempo?.name }}
-  </div>
-  <div class="col">Detalhews</div>
-</div>
-<div class="row">
+<div class="row m-2">
   <div class="col">
-    5 day weather forecast
-  </div>
-  <div class="col">
-    every 3 hours
+    <div class="row">
+      <div class="col fonte32">
+        <p class="align-center centrilizar">
+          Weather in {{ tempo?.name }}, {{ tempo?.sys.country }}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col fonte16 centrilizar ">
+        <p class="align-center cinza font-italic">
+          {{ dataAtual | date: "hh:mm d LLL" }}
+        </p>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-4">
-    <app-item-forecast
-      *ngFor="let forecast of dadosForecast"
-      [forecast]="forecast"
-    ></app-item-forecast>
+<div class="card mx-5 my-2 rounded shadow-sm p-5 ">
+  <div class="row altura200  m-2">
+    <div class="col-3 border">
+      <div class="row  altura100 bg-cinza-claro opacidade75">
+        <div class="col">
+          <p class="preto1 fonte48 centrilizar">
+            {{ tempo?.main.temp | number: "1.0-0" }}ºC
+          </p>
+        </div>
+      </div>
+      <div class="row altura100">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <p class="centrilizar">
+                <app-icone [icon]="tempo.weather[0].icon"></app-icone>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col ">
+              <p class="cinza centrilizar font-italic">
+                {{ tempo.weather[0].description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col px-5">
+      <div class="row altura50 border-bottom">
+        <div class="col">
+          <div class="row">
+            <div class="col-3 font-weight-bold">
+              Máx
+            </div>
+            <div class="col">
+              <p>{{ tempo.main.temp_max | number: "1.0-1" }} ºC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row altura50 border-bottom">
+        <div class="col">
+          <div class="row">
+            <div class="col-3 font-weight-bold">
+              Mín
+            </div>
+            <div class="col">
+              <p>{{ tempo.main.temp_min | number: "1.0-1" }} ºC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row altura50 border-bottom">
+        <div class="col">
+          <div class="row">
+            <div class="col-3 font-weight-bold">
+              Sunrise
+            </div>
+            <div class="col">
+              <p>{{ tempo.sys.sunrise | date: "hh:mm" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row altura50 border-bottom">
+        <div class="col">
+          <div class="row">
+            <div class="col-3 font-weight-bold">
+              Sunset
+            </div>
+            <div class="col">
+              <p>{{ tempo.sys.sunset | date: "hh:mm" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row m-1 my-2 mt-4 p-1">
+    <div class="col-4 fonte24">
+      5 day weather forecast
+    </div>
+    <div class="col fonte14 font-italic cinza">
+      <p class="align-bottom">
+        every 3 hours
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-item-forecast
+        *ngFor="let forecast of dadosForecast; index as i"
+        [forecast]="forecast"
+        [flag]="i == 0"
+      ></app-item-forecast>
+    </div>
   </div>
 </div>

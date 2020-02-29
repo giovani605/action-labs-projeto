@@ -10,11 +10,10 @@ export class ItemForecastComponent implements OnInit {
   @Input()
   forecast?: Forecast;
 
+  @Input()
+  flag ? = false;
+
   constructor() {}
 
   ngOnInit(): void {}
-
-  urlIcon(icon) {
-    return 'https://openweathermap.org/img/w/' + icon + '.png';
-  }
 }

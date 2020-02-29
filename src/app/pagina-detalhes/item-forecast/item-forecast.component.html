@@ -1,29 +1,43 @@
-<div class="row m-1">
-  <div class="col">
+<div
+  class="row m-1 p-5"
+  [ngClass]="{
+    'bg-cinza-claro border-primary border-left borderSize8 ': flag,
+    ' border-bottom': !flag
+  }"
+>
+  <div class="col-2">
     <div class="row">
-      <div class="col">{{ forecast.dt_txt | date: "EE d LLL" }}</div>
+      <div class="col font-weight-bold fonte16">
+        {{ forecast.dt_txt | date: "EE d LLL" }}
+      </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col font-italic fonte14 cinza">
         {{ forecast.dt_txt | date: "hh:mm" }}
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col-4">
     <div class="row">
-      <div class="col">{{ forecast.weather[0].description }}</div>
-      <div class="col">
-        <img src="{{ urlIcon(forecast.weather[0].icon) }}" />
+      <div class="col-3 size5050">
+        <app-icone [icon]="forecast.weather[0].icon"></app-icone>
+      </div>
+      <div class="col cinza fonte14 font-italic align-middle">
+        {{ forecast.weather[0].description }}
       </div>
     </div>
   </div>
   <div class="col">
     <div class="row">
-      <div class="col">
-        {{ forecast.main.temp_max }}
-      </div>
-      <div class="col">
-        {{ forecast.main.temp_min }}
+      <div class="col-5">
+        <div class="row">
+          <div class="col preto1 fonte16 font-weight-bold">
+            {{ forecast.main.temp_max | number: "1.0-1" }} ºC
+          </div>
+          <div class="col azul1 fonte16 font-weight-bold">
+            {{ forecast.main.temp_min | number: "1.0-1" }} ºC
+          </div>
+        </div>
       </div>
     </div>
   </div>

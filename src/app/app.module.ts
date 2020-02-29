@@ -12,6 +12,7 @@ import { PaginaPesquisaComponent } from './pagina-pesquisa/pagina-pesquisa.compo
 import { PaginaDetalhesComponent } from './pagina-detalhes/pagina-detalhes.component';
 import { FormsModule } from '@angular/forms';
 import { ItemForecastComponent } from './pagina-detalhes/item-forecast/item-forecast.component';
+import { IconeComponent } from './icone/icone.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ItemForecastComponent } from './pagina-detalhes/item-forecast/item-fore
     BarraPesquisaCidadeComponent,
     PaginaPesquisaComponent,
     PaginaDetalhesComponent,
-    ItemForecastComponent
+    ItemForecastComponent,
+    IconeComponent
   ],
   imports: [
     BrowserModule,
