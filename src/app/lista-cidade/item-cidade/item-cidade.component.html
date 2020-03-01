@@ -1,9 +1,12 @@
 <div class="card mx-5 my-2 rounded shadow-sm p-5 " (click)="redirecionar()">
   <div class="row">
-    <div class="col">
-      <div class="row  altura100 bg-cinza-claro opacidade75">
+    <div class="col bg-cinza-claro opacidade75">
+      <div class="row">
         <div class="col">
-          <p class="preto1 fonte48 centro">
+          <p
+            class="preto1 fonte48 centro font-weight-bold"
+            style="color: #3c3c3c; opacity: 0.75;"
+          >
             {{ cidade?.main.temp | number: "1.0-0" }}ºC
           </p>
         </div>

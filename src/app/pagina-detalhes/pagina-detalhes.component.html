@@ -22,7 +22,7 @@
       <div class="row  altura100 bg-cinza-claro opacidade75">
         <div class="col">
           <p class="preto1 fonte48 centro">
-            {{ tempo?.main.temp | number: "1.0-0" }}ºC
+            {{ tempo?.main?.temp | number: "1.0-0" }}ºC
           </p>
         </div>
       </div>
@@ -53,7 +53,7 @@
               Máx
             </div>
             <div class="col">
-              <p>{{ tempo.main.temp_max | number: "1.0-1" }} ºC</p>
+              <p>{{ tempo.main?.temp_max | number: "1.0-1" }} ºC</p>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
               Mín
             </div>
             <div class="col">
-              <p>{{ tempo.main.temp_min | number: "1.0-1" }} ºC</p>
+              <p>{{ tempo.main?.temp_min | number: "1.0-1" }} ºC</p>
             </div>
           </div>
         </div>

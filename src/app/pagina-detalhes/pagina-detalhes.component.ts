@@ -1,3 +1,4 @@
+import { Weather } from './../classes/weather.class';
 import { Tempo } from './../classes/tempo.class';
 import { Forecast } from './../classes/forecast.class';
 import { WeatherService } from './../services/weather.service';
@@ -14,7 +15,11 @@ export class PaginaDetalhesComponent implements OnInit {
 
   dataAtual = new Date();
 
-  tempo: Tempo = { weather: null };
+  tempo: Tempo = {
+    weather: [],
+    sys: { country: null },
+    main: { temp: null }
+  };
 
   constructor(
     private weatherService: WeatherService,
