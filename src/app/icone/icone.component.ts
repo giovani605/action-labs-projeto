@@ -8,11 +8,22 @@ import { Component, OnInit, Input } from '@angular/core';
 export class IconeComponent implements OnInit {
   @Input()
   icon;
+
+  @Input()
+  flag ? = false;
   constructor() {}
 
   ngOnInit(): void {}
 
   urlIcon() {
-    return 'https://openweathermap.org/img/w/' + this.icon + '.png';
+    if (!this.flag) {
+      return 'https://openweathermap.org/img/w/' + this.icon + '.png';
+    } else {
+      return (
+        'http://openweathermap.org/images/flags/' +
+        this.icon.toLowerCase() +
+        '.png'
+      );
+    }
   }
 }

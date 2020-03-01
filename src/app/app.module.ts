@@ -1,3 +1,4 @@
+import { IconeModule } from './icone/icone.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -20,8 +21,7 @@ import { IconeComponent } from './icone/icone.component';
     BarraPesquisaCidadeComponent,
     PaginaPesquisaComponent,
     PaginaDetalhesComponent,
-    ItemForecastComponent,
-    IconeComponent
+    ItemForecastComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +29,8 @@ import { IconeComponent } from './icone/icone.component';
     BrowserAnimationsModule,
     ListaCidadeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    IconeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
