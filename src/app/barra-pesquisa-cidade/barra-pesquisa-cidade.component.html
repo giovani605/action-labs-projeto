@@ -1,1 +1,24 @@
-<input type="text" [(ngModel)]="stringBusca" (keyup)="pesquisar()" />
+<div class="row input-group base justify-content-center">
+  <div class="col-6  align-center  ">
+    <div class="row m-3 centro">
+      <div class="col WEATHER-IN-YOUR-CITY ">
+        WEATHER IN YOUR CITY
+      </div>
+    </div>
+    <div class="row">
+      <div class="col centro">
+        <div class="inner-addon right-addon ">
+          <i class="ion-search"></i>
+          <input
+            type="text"
+            class="form-control "
+            style="color: #3c3c3c;"
+            [(ngModel)]="stringBusca"
+            (keyup)="pesquisar()"
+            placeholder="Your city name"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,13 +2,13 @@
   <div class="col">
     <div class="row">
       <div class="col fonte32">
-        <p class="align-center centrilizar">
+        <p class="align-center centro">
           Weather in {{ tempo?.name }}, {{ tempo?.sys.country }}
         </p>
       </div>
     </div>
     <div class="row">
-      <div class="col fonte16 centrilizar ">
+      <div class="col fonte16 centro ">
         <p class="align-center cinza font-italic">
           {{ dataAtual | date: "hh:mm d LLL" }}
         </p>
@@ -21,7 +21,7 @@
     <div class="col-3 border">
       <div class="row  altura100 bg-cinza-claro opacidade75">
         <div class="col">
-          <p class="preto1 fonte48 centrilizar">
+          <p class="preto1 fonte48 centro">
             {{ tempo?.main.temp | number: "1.0-0" }}ºC
           </p>
         </div>
@@ -30,14 +30,14 @@
         <div class="col">
           <div class="row">
             <div class="col">
-              <p class="centrilizar">
+              <p class="centro">
                 <app-icone [icon]="tempo.weather[0].icon"></app-icone>
               </p>
             </div>
           </div>
           <div class="row">
             <div class="col ">
-              <p class="cinza centrilizar font-italic">
+              <p class="cinza centro font-italic">
                 {{ tempo.weather[0].description }}
               </p>
             </div>

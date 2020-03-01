@@ -14,7 +14,7 @@ export class PaginaDetalhesComponent implements OnInit {
 
   dataAtual = new Date();
 
-  tempo: Tempo;
+  tempo: Tempo = { weather: null };
 
   constructor(
     private weatherService: WeatherService,

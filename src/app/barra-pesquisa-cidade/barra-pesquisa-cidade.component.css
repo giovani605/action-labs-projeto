@@ -1,0 +1,49 @@
+base {
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+.WEATHER-IN-YOUR-CITY {
+  width: 221px;
+  height: 24px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* style glyph */
+.inner-addon .ion-search {
+  position: absolute;
+  padding: 10px;
+  padding-right: 30px;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  color: #39a3db;
+}
+
+/* align glyph */
+.left-addon .ion-search {
+  left: 0px;
+}
+.right-addon .ion-search {
+  right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+  padding-left: 30px;
+}
+.right-addon input {
+  padding-right: 30px;
+}
