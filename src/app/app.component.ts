@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,26 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'projeto-actions-labs';
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  flag = true;
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private location: Location
+  ) {}
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      console.log('to cahamndo');
+    this.router.events.subscribe(evt => {
+      if (evt instanceof NavigationEnd) {
+        if (evt.url.includes('/search')) {
+          this.flag = true;
+        } else {
+          this.flag = false;
+        }
+      }
     });
+  }
+  voltar() {
+    console.log('chamando');
+
+    this.router.navigate(['/search']);
   }
 }

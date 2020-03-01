@@ -1,9 +1,34 @@
-<div style=" height: 300px; background-color: #39a3db;"></div>
-<div class="container teste">
-  <div class="row justify-content-center">
-    <div class="col">
-      <app-barra-pesquisa-cidade></app-barra-pesquisa-cidade>
-      <router-outlet></router-outlet>
+<div
+  style="background-color: #39a3db;z-index: -1; width: 100%"
+  class="relativo"
+  [ngClass]="{ altura300: flag, altura100: !flag }"
+></div>
+<div class="relativo" style="top: 24px; left: 24px;z-index: 4;">
+  <span *ngIf="!flag">
+    <i (click)="voltar()" class="ion-android-arrow-back size24 branco"> </i
+  ></span>
+</div>
+
+<div class="relativo" style="z-index: 3; width: calc(100% - 80px);">
+  <div class="container" style="align-self: center;">
+    <div class="row">
+      <div class="col">
+        <app-barra-pesquisa-cidade [flag]="flag"></app-barra-pesquisa-cidade>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="relativo top200"
+  style="z-index: 2;width: calc(100% - 80px);"
+  [ngClass]="{ top200: flag, top150: !flag }"
+>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-10">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
 </div>

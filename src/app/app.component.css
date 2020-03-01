@@ -1,4 +1,17 @@
-.teste {
+.relativo {
   position: absolute;
-  top: 80px;
+}
+.top100 {
+  top: 100px;
+}
+
+.top150 {
+  top: 150px;
+}
+
+.top200 {
+  top: 200px;
+}
+.top50 {
+  top: 50px;
 }
