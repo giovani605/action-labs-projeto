@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe(evt => {
       if (evt instanceof NavigationEnd) {
-        if (evt.url.includes('/search')) {
+        if (evt.url.includes('/search') || evt.urlAfterRedirects.includes('/search')) {
           this.flag = true;
         } else {
           this.flag = false;
@@ -27,8 +27,6 @@ export class AppComponent implements OnInit {
     });
   }
   voltar() {
-    console.log('chamando');
-
     this.router.navigate(['/search']);
   }
 }
